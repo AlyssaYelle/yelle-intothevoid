@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../css/Art.css';
 
 
 class Art extends Component {
