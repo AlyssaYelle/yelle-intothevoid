@@ -19,6 +19,7 @@ header {
   justify-content: space-between;
   min-height: 80px;
   box-shadow: 2px 0 10px 5px #ede8eb;
+  z-index: 10;
 }
 
 h1 {
@@ -32,11 +33,16 @@ nav {
   margin: 0 50px 0 0;
 }
 
-a {
+nav a {
   text-decoration: none;
   color: #400102;
   margin: 0 5%;
   font-size: 1.5rem;
+  transition: color .75s ease-in-out;
+}
+
+nav a:hover {
+  color: #7656b0;
 }
 
 span {
@@ -51,6 +57,26 @@ span {
 
 .component {
   padding-top: 150px;
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+img {
+  width: 30%;
+  height: 25vw;
+  object-fit: cover;
+  object-position: center;
+  margin: 2vw 1vw;
+  transition: filter 1s ease-in-out;
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
+}
+
+img:hover {
+  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%); /* FF 35+ */
 }

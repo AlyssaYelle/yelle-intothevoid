@@ -9,19 +9,19 @@ class Art extends Component {
       art: [
         {
           title: "The ghosts we no longer know",
-          src: "../../public/assets/ghosts.png"
+          src: "https://github.com/AlyssaYelle/yelle-intothevoid/raw/master/y2v-frontend/public/assets/ghosts.png"
         },
         {
           title: "I am telling you this",
-          src: "../../public/assets/scream.png"
+          src: "https://github.com/AlyssaYelle/yelle-intothevoid/raw/master/y2v-frontend/public/assets/scream.png"
         },
         {
           title: "You are hurting all of us",
-          src: "../../public/assets/harm.png"
+          src: "https://github.com/AlyssaYelle/yelle-intothevoid/raw/master/y2v-frontend/public/assets/harm.png"
         },
         {
           title: "Open wide my veins",
-          src: "../../public/assets/blood1.png"
+          src: "https://github.com/AlyssaYelle/yelle-intothevoid/raw/master/y2v-frontend/public/assets/blood1.png"
         }
       ]
     }
