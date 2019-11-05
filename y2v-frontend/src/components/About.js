@@ -6,12 +6,12 @@ function About() {
       <article>
         <div className='portrait-here'></div>
         <div className='details'>
-          <h2>Hey ghoulfriends! I'm Yelle.</h2>
+          <h2>Hey! I'm Yelle.</h2>
         </div>
 
         <p>
           I'm an artist and software engineer based in Brooklyn and this is my art portfolio.
-
+          I built it as part of my capstone project for the American Express Developer Academy.
         </p>
 
       </article>

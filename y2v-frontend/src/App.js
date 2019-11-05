@@ -10,6 +10,7 @@ import './App.css';
 import Art from './components/Art';
 import About from './components/About';
 import Code from './components/Code';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -32,6 +33,8 @@ class App extends Component {
           <Route path="/code" component={Code} />
 
         </Router>
+
+        <Footer />
       </div>
     )
   }

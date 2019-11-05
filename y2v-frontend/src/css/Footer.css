@@ -1,0 +1,25 @@
+a {
+  text-decoration: none;
+  text-transform: lowercase;
+  color: #400102;
+  margin: 0 5%;
+  font-size: .9rem;
+  transition: color .75s ease-in-out;
+}
+
+a:hover {
+  color: #7656b0;
+  text-decoration: underline;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  display: flex;
+}
