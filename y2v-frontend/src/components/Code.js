@@ -1,9 +1,13 @@
 import React from 'react';
 import '../css/Code.css';
 
+import Player from './Player';
+
 function Code() {
   return (
-    <div className='component'>code stuff here</div>
+    <div className='component'>
+      <Player />
+    </div>
   )
 }
 
