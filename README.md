@@ -13,3 +13,8 @@ Postgres SQL
 
 #### Microservices
 Docker, AWS
+
+## SCHEMA
+I have two microservices -- content and newsletter. The content service consists of an administrative table containing a single superuser (myself), who can add and edit content. The newsletter service consists of a table containing a list of email addresses. Any visitor can add their email address.
+
+![ER Diagram](https://github.com/AlyssaYelle/yelle-intothevoid/blob/master/assets/ERD.png)
