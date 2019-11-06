@@ -16,7 +16,7 @@ public class NewsletterController {
     NewsletterService newsletterService;
 
     @PostMapping("/subscribe")
-    public Newsletter createRole(@RequestBody Newsletter newsletter) {
+    public Newsletter subscribe(@RequestBody Newsletter newsletter) {
         return newsletterService.createNewsletterEntry(newsletter);
     }
 }
