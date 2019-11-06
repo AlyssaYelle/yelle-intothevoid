@@ -13,4 +13,7 @@ public interface AdminRepository extends CrudRepository<Admin, Long> {
     @Query("FROM Admin a WHERE a.username = ?1 and a.password = ?2")
     public Admin login(String username, String password);
 
+    // get admin by their username
+    public Admin findByUsername(String username);
+
 }
