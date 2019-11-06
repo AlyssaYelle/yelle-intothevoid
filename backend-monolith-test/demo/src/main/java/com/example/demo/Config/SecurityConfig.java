@@ -43,7 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.cors();
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/newsletter/**")
+                .antMatchers("/newsletter/**", "/admin/")
                 .permitAll()
 //                .antMatchers("/user/**", "/profile/**", "/post/**", "/comment/**")
 //                .authenticated()

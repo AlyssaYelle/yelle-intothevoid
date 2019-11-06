@@ -10,4 +10,7 @@ public interface AdminService extends UserDetailsService {
 
     // allow admin to log in
     public String login(Admin admin);
+
+    // get admin by username
+    public Admin getAdmin(String username);
 }
