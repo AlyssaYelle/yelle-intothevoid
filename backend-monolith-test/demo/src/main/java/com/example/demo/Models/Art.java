@@ -1,6 +1,8 @@
 package com.example.demo.Models;
 
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "art")
@@ -24,12 +26,17 @@ public class Art {
     private String link;
 
 
-    /*
-    * TODO
-    *  join with song table
-    *  each song will be associated with a single piece of art
-    *  but art can be associated with multiple songs
-    * */
+
+    // one to many relationship between art and songs
+    @OneToMany(
+            mappedBy = "art",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Songs> songs;
+
+
+    public Art(){}
 
     // getters and setters
 

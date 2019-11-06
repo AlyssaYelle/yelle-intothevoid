@@ -1,5 +1,8 @@
 package com.example.demo.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 
 @Entity
@@ -24,12 +27,23 @@ public class Songs {
     @Column
     private String uri;
 
-    /*
-     * TODO
-     *  join with art table
-     *  each song will be associated with a single piece of art
-     *  but art can be associated with multiple songs
-     * */
+    // many to one relationship between songs and art
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "art_id", nullable = false)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private Art art;
+
+    @JsonIgnore
+    public Art getArt() {
+        return art;
+    }
+
+    public void setArt(Art art) {
+        this.art = art;
+    }
+
+    public Songs(){}
+
 
     // getters and setters
 
