@@ -23,9 +23,6 @@ public class Art {
     @Column
     private String link;
 
-    // going to change how i do this later, but art will be matched with a song
-    @Column
-    private String song;
 
     /*
     * TODO
@@ -69,11 +66,4 @@ public class Art {
         this.link = link;
     }
 
-    public String getSong() {
-        return song;
-    }
-
-    public void setSong(String song) {
-        this.song = song;
-    }
 }
