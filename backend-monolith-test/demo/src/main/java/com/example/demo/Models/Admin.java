@@ -7,6 +7,7 @@ import javax.persistence.*;
 public class Admin {
 
     // unique username
+    @Id
     @Column(unique = true)
     private String username;
 

@@ -1,13 +1,12 @@
 package com.example.demo.Models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(name= "newsletter")
+@Table(name = "newsletter")
 public class Newsletter {
     // unique email
+    @Id
     @Column(unique = true)
     private String email;
 
