@@ -8,8 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SongsRepository extends CrudRepository<Songs, Long> {
 
-    /*
-    * TODO
-    *  add query(??? will i need to?) to grab iterable list of songs that match a given art id
-    * */
+    @Query("FROM Songs s WHERE s.art.id = ?1")
+    public Iterable<Songs> listSongsByArtId(Long artId);
 }
