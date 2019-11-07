@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import '../css/Art.css';
 
+// import custom components
+import ArtImg from './ArtImg';
+
 
 class Art extends Component {
   constructor(props) {
@@ -34,7 +37,7 @@ class Art extends Component {
       {this.state.art ?
         this.state.art.map((item, key) => {
           return (
-            <img key={key} src={item.src} alt={item.title}/>
+            <ArtImg key={key} info={item}/>
           )
         })
         : ''
