@@ -1,24 +1,30 @@
 package com.example.demo.Controllers;
 
 import com.example.demo.Models.Art;
+import com.example.demo.Models.ArtSongObj;
 import com.example.demo.Services.ArtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/")
 public class ArtController {
     @Autowired
     ArtService artService;
 
-    @PostMapping("/art/add")
+    @PostMapping("admin/art/add")
     public Art addArt(@RequestBody Art art) {
         return artService.addArt(art);
     }
 
-    @GetMapping("/art/list")
+    @GetMapping("admin/art/list")
     public Iterable<Art> listAllArt(){
         return artService.listAllArt();
+    }
+
+    @GetMapping("/art/list")
+    public Iterable<ArtSongObj> listArtWithSong() {
+        return artService.listArtWithSong();
     }
 
     /**
