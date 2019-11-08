@@ -46,7 +46,7 @@ services:
   site-services:
     image: maven:3.6.1-jdk-8
     ports:
-      - '8181:8181'
+      - '8282:8282'
     working_dir: /app
     volumes:
       - ./site-services:/app
