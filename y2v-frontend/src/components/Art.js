@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../css/Art.css';
 
 // import custom components
-import ArtImg from './ArtImg';
+import ArtImg from './ArtImg'; 
 
 
 class Art extends Component {
