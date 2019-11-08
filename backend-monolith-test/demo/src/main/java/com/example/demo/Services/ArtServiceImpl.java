@@ -2,6 +2,7 @@ package com.example.demo.Services;
 
 import com.example.demo.Models.Admin;
 import com.example.demo.Models.Art;
+import com.example.demo.Models.ArtSongObj;
 import com.example.demo.Repositories.ArtRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -33,5 +34,10 @@ public class ArtServiceImpl implements ArtService {
 
         // now delete it
         artRepository.delete(art);
+    }
+
+    @Override
+    public Iterable<ArtSongObj> listArtWithSong() {
+        return artRepository.listArtWithSong();
     }
 }

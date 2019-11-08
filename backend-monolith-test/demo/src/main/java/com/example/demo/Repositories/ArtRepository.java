@@ -11,5 +11,5 @@ public interface ArtRepository extends CrudRepository<Art, Long> {
     // select custom ArtSongObj
     @Query("SELECT new com.example.demo.Models.ArtSongObj(a.title, a.description, a.link, s.title, s.artist, s.uri)" +
             "FROM Songs s JOIN s.art a")
-    public Iterable<ArtSongObj> listArtWithSongs();
+    public Iterable<ArtSongObj> listArtWithSong();
 }
