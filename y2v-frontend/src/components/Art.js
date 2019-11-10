@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import '../css/Art.css';
 
 // import custom components
-import ArtImg from './ArtImg'; 
+import ArtImg from './ArtImg';
+import ArtModal from './ArtModal';
 
 
 class Art extends Component {
@@ -34,6 +35,7 @@ class Art extends Component {
   render() {
     return (
       <div className="component">
+      <ArtModal />
       {this.state.art ?
         this.state.art.map((item, key) => {
           return (
