@@ -83,7 +83,7 @@ class Art extends Component {
   render() {
     return (
       <div className="component">
-      <ArtModal info={item}/>
+      <ArtModal info={this.state.art[0]}/>
       {this.state.art ?
         this.state.art.map((item, key) => {
           return (

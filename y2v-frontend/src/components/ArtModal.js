@@ -5,16 +5,16 @@ import Player from './Player';
 
 
 class ArtModal extends Component {
-  render() {
+  render(props) {
     return (
       <div id="myModal" className="modal">
         <span className="close">×</span>
         <div className="modal-content">
-          <img className="modal-img" id="img01" src="https://github.com/AlyssaYelle/yelle-intothevoid/raw/master/y2v-frontend/public/assets/scream.png" alt=""/>
+          <img className="modal-img" id="img01" src={this.props.info["artLink"]} alt=""/>
           <div id="caption">
-            <h3>today i paint because i cannot scream</h3>
-            <Player />
-            <p>you asked me why i never smile anymore so i am painting you this</p>
+            <h3>{this.props.info["artTitle"]}</h3>
+            <Player uri={this.props.info["songUri"]} title={this.props.info["songTitle"]}/>
+            <p>{this.props.info["artDesc"]}</p>
           </div>
         </div>
       </div>

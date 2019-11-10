@@ -14,8 +14,8 @@ class Player extends Component {
     return (
       <div>
         <iframe
-          src={this.state.uri}
-          title={this.state.title}
+          src={`https://open.spotify.com/embed/track/${this.props.uri}`}
+          title={this.props.title}
           width="300"
           height="80"
           frameborder="0"
