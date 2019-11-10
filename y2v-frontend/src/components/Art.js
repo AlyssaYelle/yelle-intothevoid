@@ -11,6 +11,10 @@ class Art extends Component {
     super();
 
     this.state = {
+      modal: {
+        isDisplayed: false,
+        info: {}
+      },
       art: [
         {
             "artTitle": "do no harm",
@@ -83,7 +87,10 @@ class Art extends Component {
   render() {
     return (
       <div className="component">
-      <ArtModal info={this.state.art[0]}/>
+      {this.state.modal.isDisplayed ?
+        <ArtModal info={this.state.art[0]}/>
+        : ''
+      }
       {this.state.art ?
         this.state.art.map((item, key) => {
           return (

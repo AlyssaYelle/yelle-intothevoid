@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
 
 class Player extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      uri: 'https://open.spotify.com/embed/track/3TbKcmraxp8J4PvsJNRXhi',
-      title: 'Keep the streets empty for me'
-    }
-  }
 
-  render() {
+  render(props) {
     return (
       <div>
         <iframe

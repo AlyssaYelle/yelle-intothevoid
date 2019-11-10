@@ -13,10 +13,11 @@
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
+  display: block; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   padding-top: 100px; /* Location of the box */
+  padding-bottom: 40px;
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -30,8 +31,8 @@
 .modal-img {
   margin: auto;
   display: block;
-  width: 50%;
-  height: auto;
+  width: auto;
+  height: 80vh;
 }
 
 /* Caption of Modal Image */
