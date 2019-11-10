@@ -9,7 +9,6 @@ import './App.css';
 // import custom components
 import Art from './components/Art';
 import About from './components/About';
-import Code from './components/Code';
 import Footer from './components/Footer';
 
 class App extends Component {
@@ -24,13 +23,11 @@ class App extends Component {
             <nav>
               <Link className="nav-link" to="/">Art</Link>
               <Link className="nav-link" to="/about">About</Link>
-              <Link className="nav-link" to="/code">Code</Link>
             </nav>
           </header>
 
           <Route exact path="/" component={Art} />
           <Route path="/about" component={About} />
-          <Route path="/code" component={Code} />
 
         </Router>
 
