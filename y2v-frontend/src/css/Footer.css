@@ -2,8 +2,8 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border-top: 1px solid maroon;
-  padding: 15px 20px;
+  border-top: 1px solid #ccbac4;
+  padding: 15px 20px 5px 20px;
 }
 
 a {
@@ -20,8 +20,14 @@ a:hover {
   text-decoration: underline;
 }
 
-ul {
+form {
+  display: flex;
+  flex-direction: column;
+}
 
+#submit {
+  width: 70px;
+  margin: 5px 0;
 }
 
 li {
@@ -30,8 +36,11 @@ li {
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
-  background-color: black;
-  background-image: url('../Untitled-Artwork-1.png');
+  width: 30%;
+  text-align: center;
+}
+
+#logo {
+  width: 100px;
+  height:100px;
 }
