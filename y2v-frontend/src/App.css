@@ -59,7 +59,7 @@ span {
 .component {
   padding-top: 150px;
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 80px auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

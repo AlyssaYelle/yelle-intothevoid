@@ -4,7 +4,10 @@ import React, { Component } from 'react';
 class ArtImg extends Component {
   render(props) {
     return (
-      <img src={this.props.info["artLink"]} alt={this.props.info["artTitle"]}/>
+      <img
+        src={this.props.info["artLink"]}
+        alt={this.props.info["artTitle"]}
+      />
     )
   }
 }

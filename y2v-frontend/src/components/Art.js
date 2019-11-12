@@ -17,6 +17,7 @@ class Art extends Component {
       },
       art: []
     }
+
   }
 
   componentDidMount() {
@@ -33,13 +34,15 @@ class Art extends Component {
       .catch(error => {
         console.log(error)
       })
-}
+  }
+
+
 
   render() {
     return (
       <div className="component">
       {this.state.modal.isDisplayed ?
-        <ArtModal info={this.state.art[0]}/>
+        <ArtModal info={this.state.modal.info}/>
         : ''
       }
       {this.state.art ?
