@@ -6,14 +6,12 @@ import Player from './Player';
 
 class ArtModal extends Component {
 
-  closeModal() {
-    document.getElementById('myModal').style.display = 'none';
-  }
+
 
   render(props) {
     return (
       <div id="myModal" className="modal">
-        <span className="close" onClick={this.closeModal}>×</span>
+        <span className="close" onClick={this.props.close}>×</span>
         <div className="modal-content">
           <img className="modal-img" id="img01" src={this.props.info["artLink"]} alt=""/>
           <div id="caption">

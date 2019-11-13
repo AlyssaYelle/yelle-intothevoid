@@ -1,0 +1,22 @@
+.adminPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.adminForms {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.submit {
+  margin-top: 10px;
+}
+
+.LoginComponent {
+  margin-top: 100px;
+  margin: 100px auto;
+}

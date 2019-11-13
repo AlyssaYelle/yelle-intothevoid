@@ -12,23 +12,27 @@ class ArtImg extends Component {
     }
 
     this.displayModal = this.displayModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   displayModal() {
-    if (this.state.isModalDisplayed) {
-      document.getElementById('myModal').style.display = 'block';
-    } else {
-      this.setState({
-        isModalDisplayed: true
-      })
-    }
+
+    this.setState({
+      isModalDisplayed: true
+    })
+  }
+
+  closeModal() {
+    this.setState({
+      isModalDisplayed: false
+    })
   }
 
   render(props) {
     return (
       <div className='artImg'>
       {this.state.isModalDisplayed ?
-        <ArtModal info={this.props.info} display="block"/>
+        <ArtModal info={this.props.info} close={this.closeModal} display="none"/>
         : ''
       }
       <img

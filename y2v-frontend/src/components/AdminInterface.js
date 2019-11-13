@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import '../css/AdminInterface.css';
+import '../css/Admin.css';
+import ArtData from './ArtData';
 
 class AdminInterface extends Component {
   constructor() {
@@ -164,7 +165,14 @@ class AdminInterface extends Component {
 
         <div className="currentData">
 
-
+          {this.state.art ?
+            this.state.art.map((item, key) => {
+              return (
+                <ArtData key={key} info={item}/>
+              )
+            })
+            : ''
+          }
 
         </div>
       </div>
