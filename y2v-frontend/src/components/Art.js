@@ -21,7 +21,6 @@ class Art extends Component {
         return response.json();
       })
       .then(response => {
-        console.log(response)
         this.setState({
           art: response
         })

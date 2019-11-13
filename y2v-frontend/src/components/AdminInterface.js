@@ -13,12 +13,31 @@ class AdminInterface extends Component {
       songTitle: '',
       songArtist: '',
       songURI: '',
-      songArtId: ''
+      songArtId: '',
+      art: [],
+      songs: []
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleArtSubmit = this.handleArtSubmit.bind(this);
     this.handleSongSubmit = this.handleSongSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:8282/admin/art/list')
+      .then(response => {
+        return response.json();
+      })
+      .then(response => {
+        console.log(response)
+        this.setState({
+          art: response
+        })
+      })
+      .catch(error => {
+        console.log(error)
+      })
+
   }
 
   handleInputChange(event) {
@@ -140,6 +159,12 @@ class AdminInterface extends Component {
             </label>
             <input className='submit' type="submit" value="submit song" />
           </form>
+
+        </div>
+
+        <div className="currentData">
+
+
 
         </div>
       </div>
