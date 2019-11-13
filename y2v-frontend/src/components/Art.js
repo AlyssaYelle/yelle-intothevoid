@@ -3,7 +3,6 @@ import '../css/Art.css';
 
 // import custom components
 import ArtImg from './ArtImg';
-import ArtModal from './ArtModal';
 
 
 class Art extends Component {
@@ -11,10 +10,6 @@ class Art extends Component {
     super();
 
     this.state = {
-      modal: {
-        isDisplayed: false,
-        info: {}
-      },
       art: []
     }
 
@@ -41,10 +36,6 @@ class Art extends Component {
   render() {
     return (
       <div className="component">
-      {this.state.modal.isDisplayed ?
-        <ArtModal info={this.state.modal.info}/>
-        : ''
-      }
       {this.state.art ?
         this.state.art.map((item, key) => {
           return (
