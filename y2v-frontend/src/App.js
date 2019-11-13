@@ -10,6 +10,7 @@ import './App.css';
 import Art from './components/Art';
 import About from './components/About';
 import Footer from './components/Footer';
+import AdminInterface from './components/AdminInterface';
 
 class App extends Component {
   render() {
@@ -28,6 +29,7 @@ class App extends Component {
 
           <Route exact path="/" component={Art} />
           <Route path="/about" component={About} />
+          <Route path="/admin" component={AdminInterface} />
 
         </Router>
 
