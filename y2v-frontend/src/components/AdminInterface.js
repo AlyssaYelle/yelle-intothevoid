@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import '../css/Admin.css';
-import ArtData from './ArtData';
+// import ArtData from './ArtData';
 
 class AdminInterface extends Component {
   constructor() {
@@ -14,9 +14,7 @@ class AdminInterface extends Component {
       songTitle: '',
       songArtist: '',
       songURI: '',
-      songArtId: '',
-      art: [],
-      songs: []
+      songArtId: ''
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -24,22 +22,6 @@ class AdminInterface extends Component {
     this.handleSongSubmit = this.handleSongSubmit.bind(this);
   }
 
-  componentDidMount() {
-    fetch('http://localhost:8282/admin/art/list')
-      .then(response => {
-        return response.json();
-      })
-      .then(response => {
-        console.log(response)
-        this.setState({
-          art: response
-        })
-      })
-      .catch(error => {
-        console.log(error)
-      })
-
-  }
 
   handleInputChange(event) {
     const target = event.target;
@@ -163,18 +145,6 @@ class AdminInterface extends Component {
 
         </div>
 
-        <div className="currentData">
-
-          {this.state.art ?
-            this.state.art.map((item, key) => {
-              return (
-                <ArtData key={key} info={item}/>
-              )
-            })
-            : ''
-          }
-
-        </div>
       </div>
     )
   }

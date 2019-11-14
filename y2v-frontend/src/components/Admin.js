@@ -9,24 +9,39 @@ class Admin extends Component {
     super();
 
     this.state = {
-      isLoggedIn: false,
-      token: '',
-      art: [],
-      music: [],
       artTitle: '',
       artDescription: '',
       artLink: '',
       songTitle: '',
       songArtist: '',
       songURI: '',
-      songArtId: ''
+      songArtId: '',
+      username: '',
+      password: '',
+      isLoggedIn: false,
+      token: ''
     }
+    this.login = this.login.bind(this)
   }
+
+  login() {
+    this.setState({
+      isLoggedIn: true
+    })
+  }
+
+
   render() {
     return (
       <div className='adminPage'>
-        <LoginComponent />
-        <AdminInterface />
+        {!this.state.isLoggedIn ?
+          <LoginComponent login={this.login}/>
+          : ''
+        }
+        {this.state.isLoggedIn ?
+          <AdminInterface />
+          : ''
+        }
       </div>
     )
   }

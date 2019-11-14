@@ -25,7 +25,6 @@ class LoginComponent extends Component {
     });
   }
 
-  // probably should actually add this to parent class and call as props
   handleSubmit(event) {
     event.preventDefault();
 
@@ -40,11 +39,16 @@ class LoginComponent extends Component {
       })
     })
     .then((res) => {
-      console.log(res);
       return res.json();
     })
     .then((res) => {
-      alert("Successfully logged in!")
+      console.log(res)
+      if (res.token) {
+        alert("Successfully logged in!")
+        this.props.login();
+      } else {
+        alert("Incorrect username or password")
+      }
 
       this.setState({
         username: '',
