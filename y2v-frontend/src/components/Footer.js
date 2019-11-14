@@ -42,13 +42,9 @@ class Footer extends Component {
       })
     })
     .then((res) => {
-      console.log(res);
       return res.json();
     })
     .then((res) => {
-      console.log(this.state.firstName);
-      console.log(this.state.lastName);
-      console.log(this.state.email);
       alert("Thanks for signing up!")
 
       this.setState({

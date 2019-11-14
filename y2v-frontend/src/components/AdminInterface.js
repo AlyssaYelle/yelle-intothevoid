@@ -36,26 +36,75 @@ class AdminInterface extends Component {
   handleArtSubmit(event) {
     event.preventDefault();
 
-    console.log('submitting art');
 
-    this.setState({
-      artTitle: '',
-      artDescription: '',
-      artLink: ''
+    fetch('http://localhost:8282/admin/art/add', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+          title: this.state.artTitle,
+          description: this.state.artDescription,
+          link: this.state.artLink,
+
+      })
     })
+    .then((res) => {
+      return res.json();
+    })
+    .then((res) => {
+      alert("Art successfully submitted")
+
+      this.setState({
+        artTitle: '',
+        artDescription: '',
+        artLink: ''
+      })
+    })
+    .catch((err) => {
+      console.log('fetch unsuccessful');
+        console.log(err);
+    })
+
   }
 
   handleSongSubmit(event) {
     event.preventDefault();
 
-    console.log('submitting song');
 
-    this.setState({
-      songTitle: '',
-      songArtist: '',
-      songURI: '',
-      songArtId: ''
+    fetch('http://localhost:8282/admin/song/add', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+          title: this.state.songTitle,
+          artist: this.state.songArtist,
+          uri: this.state.songURI,
+          art: {
+            id: this.state.songArtId
+          }
+      })
     })
+    .then((res) => {
+      return res.json();
+    })
+    .then((res) => {
+      alert("Music successfully submitted")
+
+      this.setState({
+        songTitle: '',
+        songArtist: '',
+        songURI: '',
+        songArtId: ''
+      })
+    })
+    .catch((err) => {
+      console.log('fetch unsuccessful');
+        console.log(err);
+    })
+
+
   }
 
   render() {
