@@ -32,13 +32,14 @@ class ArtImg extends Component {
     return (
       <div className='artImg'>
       {this.state.isModalDisplayed ?
-        <ArtModal info={this.props.info} close={this.closeModal} display="none"/>
+        <ArtModal info={this.props.info} close={this.closeModal} />
         : ''
       }
       <img
         onClick={this.displayModal}
         src={this.props.info["artLink"]}
         alt={this.props.info["artTitle"]}
+        style={{cursor:'pointer'}}
       />
       </div>
     )

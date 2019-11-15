@@ -184,7 +184,7 @@ class AdminInterface extends Component {
                 id='songArtId'
                 type="number"
                 name="songArtId"
-                placeholder='ard ID'
+                placeholder='art ID'
                 value={this.state.songArtId}
                 onChange={this.handleInputChange}
               />
