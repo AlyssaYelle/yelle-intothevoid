@@ -3,17 +3,22 @@ Capstone project for the American Express Developer Academy. I wanted to build s
 
 ## TIMELINE
 ### Wireframes
+![main page](https://github.com/AlyssaYelle/yelle-intothevoid/blob/master/assets/wireframe2.png)
 
+![user interface](https://github.com/AlyssaYelle/yelle-intothevoid/blob/master/assets/wireframe1.png)
 
 ### USER STORIES
-![I want to maintain a website for my art that is easy to update](https://github.com/AlyssaYelle/yelle-intothevoid/blob/master/assets/userstory_me.png)
+![Gallery curators/local artists](https://github.com/AlyssaYelle/yelle-intothevoid/blob/master/assets/userstory4.png)
 
 ![My family is proud of me and wants to support me](https://github.com/AlyssaYelle/yelle-intothevoid/blob/master/assets/userstory_fam.png)
 
 ![My creative friends want to know what I'm working on](https://github.com/AlyssaYelle/yelle-intothevoid/blob/master/assets/userstory_friends.png)
 
+![I want to maintain a website for my art that is easy to update](https://github.com/AlyssaYelle/yelle-intothevoid/blob/master/assets/userstory_me.png)
+
 
 ### Front End
+![Basic front end layout](https://github.com/AlyssaYelle/yelle-intothevoid/blob/master/assets/frontend.png)
 
 
 ### Back End
@@ -21,6 +26,7 @@ Capstone project for the American Express Developer Academy. I wanted to build s
 
 
 ### Connecting Everything
+![MVC-esque diagram](https://github.com/AlyssaYelle/yelle-intothevoid/blob/master/assets/connecting.png)
 
 
 
